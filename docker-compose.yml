@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+  golf-mq:
+    container_name: golf-mq
+    image: cloudesire/activemq
+    ports:
+      - "8161:8161"
+      - "61616:61616"
+      - "61613:61613"
+  application:
+    container_name: application
+    build:
+      network: host
+      context: ./application
+      dockerfile: Dockerfile
+  chelseafc:
+    container_name: chelseafc
+    build:
+      network: host
+      context: ./chelseafc
+      dockerfile: Dockerfile
+    ports:
+      - "8098:8080"
+  arsenalfc:
+    container_name: arsenalfc
+    build:
+      network: host
+      context: ./arsenalfc
+      dockerfile: Dockerfile
+    ports:
+      - "8099:8080"

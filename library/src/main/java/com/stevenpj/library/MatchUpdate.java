@@ -1,6 +1,8 @@
 package com.stevenpj.library;
 
-public class MatchUpdate {
+import java.io.Serializable;
+
+public class MatchUpdate implements Serializable {
     private String club;
     private String player;
     private String action;

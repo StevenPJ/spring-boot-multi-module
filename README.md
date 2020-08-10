@@ -27,9 +27,9 @@ To run the 'jms' demo, run the below
 git checkout jms
 ./mvnw clean package
 docker-compose up -d
-java -jar application/target/application-0.0.1-SNAPSHOT.jar
+docker logs -f application
 ```
-and then run the same demo and compare results
+and then run the same demo and compare results to the previous
 ```
 ./demo.sh
 ```

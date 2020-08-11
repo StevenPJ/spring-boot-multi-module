@@ -40,3 +40,8 @@ from their staff at the game, however they compose their own `MatchUpdate` insta
 On the `master` branch, events are published using [Springs Event mechanism](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-events), and the two clubs systems are published as JARs whose components are loaded into the main applications Spring Context.
 
 On the `jms` branch, the clubs apps become independently deployable, using JMS for event publishing.
+
+### Next
+
+* Look at using [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for each module to ease seperation later
+* Move common connection properties into the `library` to remove duplication and isolate clubs from communication technology changes 
